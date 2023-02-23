@@ -52,8 +52,8 @@ interface Basic {
 }
 
 enum ConversationPartSource {
-  user = "user",
-  gpt = "gpt",
+  user = "Usted",
+  gpt = "GPT",
 }
 
 interface ConversationPart {
@@ -130,14 +130,14 @@ const initialState: EditorState = {
       id: "first_workspace",
       name: "Draft #1",
       prompt:
-        "Input: Anna and Mike is going skiing.\n" +
-        "Output: Anna and Mike are going skiing.\n" +
-        "Input: Anna and Pat are married; he has been together for 20 years.\n" +
-        "Output: Anna and Pat are married; they have been together for 20 years.\n" +
-        "Input: I walk to the store and I bought milk.\n" +
-        "Output: I walked to the store and I bought milk.\n" +
-        "Input: {example}\n" +
-        "Output:",
+      "Entrada: Anna y Mike van a esquiar.\n" +
+      "Salida: Anna y Mike van a esquiar.\n" +
+      "Entrada: Anna y Pat están casados; han estado juntos durante 20 años.\n" +
+      "Salida: Anna y Pat están casados; han estado juntos durante 20 años.\n" +
+      "Entrada: Caminé hasta la tienda y compré leche.\n" +
+      "Salida: Caminé hasta la tienda y compré leche.\n" +
+      "Entrada: {ejemplo}\n" +
+      "Salida:",  
       modelName: "davinci",
       temperature: 0.5,
       topP: 1,
@@ -151,14 +151,14 @@ const initialState: EditorState = {
       examples: [
         {
           id: uniqid("input_"),
-          text: "We all eat the fish and then made dessert.",
-          output: "We all ate the fish and then made dessert.",
+          text: "Todos comemos el pescado y luego hicimos postre.",
+          output: "Todos comimos el pescado y luego hicimos postre.",
           isLoading: false,
         },
         {
           id: uniqid("input_"),
-          text: "I like ski every day.",
-          output: "I like skiing every day.",
+          text: "Gustame esquiar todos los días.",
+          output: "Me gusta esquiar todos los días.",
           isLoading: false,
         },
       ],
@@ -800,11 +800,11 @@ const fetchBasicOutputAsync = (): AppThunk => (dispatch, getState) => {
     (w) => w.id === state.editor.present.currentWorkspaceId
   )!;
   if (state.editor.present.apiKey === undefined) {
-    alert("Enter an API key before running requests.");
+    alert("Introduce una clave de API antes de ejecutar solicitudes.");
     return;
   }
   if (workspace.prompt.length === 0) {
-    alert("The prompt can't be empty");
+    alert("El prompt no puede estar vacío.");
     return;
   }
 
@@ -820,7 +820,7 @@ const fetchBasicOutputAsync = (): AppThunk => (dispatch, getState) => {
       dispatch(loadBasicOutput(choiceResult.text));
     })
     .catch((error) => {
-      alert("API returned an error. Refer to the console to inspect it.");
+      alert("La API devolvió un error. Consulte la consola para inspeccionarlo.");
       console.log(error.response);
       dispatch(markAllExamplesAsNotLoading());
     })
@@ -835,15 +835,15 @@ const fetchExamplesOutputsAsync = (): AppThunk => (dispatch, getState) => {
     (w) => w.id === state.editor.present.currentWorkspaceId
   )!;
   if (state.editor.present.apiKey === undefined) {
-    alert("Enter an API key before running requests.");
+    alert("Introduce una clave de API antes de ejecutar solicitudes.");
     return;
   }
   if (workspace.prompt.length === 0) {
-    alert("The prompt can't be empty");
+    alert("El prompt no puede estar vacío.");
     return;
   }
   if (workspace.prompt.indexOf("{example}") === -1) {
-    alert('Use "{example}" in your prompt to use the Multiple Examples mode');
+    alert('Utilice "{example}" en su prompt para usar el modo de Múltiples Ejemplos.');
     return;
   }
 
@@ -851,7 +851,7 @@ const fetchExamplesOutputsAsync = (): AppThunk => (dispatch, getState) => {
     (example) => example.text.length > 0
   );
   if (examples.length === 0) {
-    alert("Enter at least one example");
+    alert("Por favor, proporciona al menos un ejemplo.");
     return;
   }
 
@@ -877,7 +877,7 @@ const fetchExamplesOutputsAsync = (): AppThunk => (dispatch, getState) => {
       });
     })
     .catch((error) => {
-      alert("API returned an error. Refer to the console to inspect it.");
+      alert("La API devolvió un error. Consulte la consola para inspeccionarlo.");
       console.log(error.response);
       dispatch(markAllExamplesAsNotLoading());
     });
@@ -889,11 +889,11 @@ const fetchVariationsAsync = (): AppThunk => (dispatch, getState) => {
     (w) => w.id === state.editor.present.currentWorkspaceId
   )!;
   if (state.editor.present.apiKey === undefined) {
-    alert("Enter an API key before running requests.");
+    alert("Introduce una clave de API antes de ejecutar solicitudes.");
     return;
   }
   if (workspace.prompt.length === 0) {
-    alert("The prompt can't be empty");
+    alert("El prompt no puede estar vacío.");
     return;
   }
 
@@ -928,7 +928,7 @@ const fetchVariationsAsync = (): AppThunk => (dispatch, getState) => {
       );
     })
     .catch((error) => {
-      alert("API returned an error. Refer to the console to inspect it.");
+      alert("La API devolvió un error. Consulte la consola para inspeccionarlo.");
       console.log(error.response);
       dispatch(updateVariationsLoadingStatus(false));
     });
@@ -942,7 +942,7 @@ const sendMessageInConversationAsync =
       (w) => w.id === state.editor.present.currentWorkspaceId
     )!;
     if (state.editor.present.apiKey === undefined) {
-      alert("Enter an API key before running requests.");
+      alert("Introduce una clave de API antes de ejecutar solicitudes.");
       return;
     }
     const conversation = workspace.conversations.find(
