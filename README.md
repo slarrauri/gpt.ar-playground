@@ -2,8 +2,6 @@
 
 Playground para Gpt-3 de OpenAi en Español
 
-Original Repo: [prompts-ai](https://github.com/sevazhidkov/prompts-ai)
-
 ## Objetivos
 
 1. Ayudar a los usuarios nuevos de GPT-3 a descubrir las capacidades, fortalezas y debilidades de la tecnología.  
@@ -48,3 +46,9 @@ Cambiar entre los diferentes modos: Ctrl+1-4
 **Variaciones**: generar múltiples resultados para una misma entrada de texto y almacenarlos en una lista, comparar las variaciones por parámetros y entradas de texto iniciales. Diseñado para tareas de escritura creativa.  
 
 **Conversaciones**: interfaz similar a una conversación para experimentar con bots conversacionales. También permite mantener múltiples conversaciones al mismo tiempo.  
+
+## TODOS
+
+- Agregar mas Ejemplos
+
+Original Repo: [prompts-ai](https://github.com/sevazhidkov/prompts-ai)
