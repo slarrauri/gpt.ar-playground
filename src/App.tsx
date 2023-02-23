@@ -69,7 +69,7 @@ function App() {
                 </Box>*/}
         <Box mt={2}>
           <Typography>
-            Not affiliated with OpenAI. Feedback: seva@zhidkoff.com.
+            Develop by Slarrauri.ar and GPT.ar.
           </Typography>
         </Box>
       </Container>

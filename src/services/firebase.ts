@@ -1,9 +1,9 @@
 import firebase from "firebase";
 
 const config = {
-  apiKey: "AIzaSyAlIO8H8XBwAtN_WmtB2OIRbrlThuafVhg",
-  authDomain: "prompts-ai.firebaseapp.com",
-  projectId: "prompts-ai",
+  apiKey: "AIzaSyB8uE9RzJB8GO5ZHzQWhC5kUq7tjMGxmfc",
+  authDomain: "gtpar-playground.firebaseapp.com",
+  projectId: "gtpar-playground",
 };
 
 firebase.initializeApp(config);
