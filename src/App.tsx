@@ -18,6 +18,7 @@ import {
 import Header from "./components/Header";
 import TemplateDialog from "./components/dialogs/TemplateDialog";
 import ApiKeyDialog from "./components/dialogs/ApiKeyDialog";
+import texts from './texts';
 
 function App() {
   const dispatch = useDispatch();
@@ -69,7 +70,7 @@ function App() {
                 </Box>*/}
         <Box mt={2}>
           <Typography>
-            Develop by Slarrauri.ar and GPT.ar.
+          {texts.general.footer}
           </Typography>
         </Box>
       </Container>

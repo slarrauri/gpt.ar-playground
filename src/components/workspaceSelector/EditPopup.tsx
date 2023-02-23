@@ -35,7 +35,7 @@ export default function EditPopup(props: Props) {
       onClose={props.onClose}
       aria-labelledby="form-dialog-title"
     >
-      <DialogTitle id="form-dialog-title">Edit</DialogTitle>
+      <DialogTitle id="form-dialog-title">Editar</DialogTitle>
       <DialogContent>
         <TextField
           autoFocus
@@ -53,10 +53,10 @@ export default function EditPopup(props: Props) {
       </DialogContent>
       <DialogActions>
         <Button onClick={props.onClose} color="primary">
-          Cancel
+          Cancelar
         </Button>
         <Button onClick={onSave} color="primary">
-          Save
+          Guardar
         </Button>
       </DialogActions>
     </Dialog>

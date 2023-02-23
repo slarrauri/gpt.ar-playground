@@ -15,7 +15,7 @@ export default function RunExamplesButton() {
       color="primary"
       onClick={fetchOutputs}
     >
-      Run
+      Ejecutar
     </Button>
   );
 }

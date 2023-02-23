@@ -34,9 +34,7 @@ export default function BasicTab() {
           <CardContent>
             <Typography variant="subtitle1">Simple</Typography>
             <Typography variant="body2">
-              This is a basic tool to explore the general idea of GPT-3. GPT-3
-              will try to continue text you wrote in the prompt field and will
-              display the result in the field below.
+            Este es una herramienta básica para explorar la idea general de GPT-3. GPT-3 tratará de continuar el texto que escribió en el campo de entrada y mostrará el resultado en el campo de abajo.
             </Typography>
             <Box mt={1}>
               <Button
@@ -46,7 +44,7 @@ export default function BasicTab() {
                 onClick={fetchOutputs}
                 disabled={basicLoading}
               >
-                {basicLoading ? "Processing..." : "Run"}
+                {basicLoading ? "Procesando..." : "Ejecutar"}
               </Button>
             </Box>
           </CardContent>
@@ -57,7 +55,7 @@ export default function BasicTab() {
           <CardContent>
             <TextField
               aria-readonly={"true"}
-              label="Output"
+              label="Salida"
               variant="outlined"
               fullWidth={true}
               multiline
@@ -67,7 +65,7 @@ export default function BasicTab() {
               InputProps={{
                 readOnly: true,
               }}
-              placeholder={"Resulting text will appear here"}
+              placeholder={"El texto resultante aparecerá aquí."}
             />
           </CardContent>
         </Card>

@@ -138,14 +138,14 @@ export const migrations = {
             {
               id: "first_workspace",
               prompt:
-                "Input: Anna and Mike is going skiing.\n" +
-                "Output: Anna and Mike are going skiing.\n" +
-                "Input: Anna and Pat are married; he has been together for 20 years.\n" +
-                "Output: Anna and Pat are married; they have been together for 20 years.\n" +
-                "Input: I walk to the store and I bought milk.\n" +
-                "Output: I walked to the store and I bought milk.\n" +
-                "Input: {example}\n" +
-                "Output:",
+                "Entrada: Anna y Mike van a esquiar.\n" +
+                "Salida: Anna y Mike van a esquiar.\n" +
+                "Entrada: Anna y Pat están casados; han estado juntos por 20 años.\n" +
+                "Salida: Anna y Pat están casados; han estado juntos por 20 años.\n" +
+                "Entrada: Caminé hasta la tienda y compré leche.\n" +
+                "Salida: Caminé hasta la tienda y compré leche.\n" +
+                "Entrada: {ejemplo}\n" +
+                "Salida:",
               modelName: "davinci",
               temperature: 0.5,
               topP: 1,
@@ -159,14 +159,14 @@ export const migrations = {
               examples: [
                 {
                   id: uniqid("input_"),
-                  text: "We all eat the fish and then made dessert.",
-                  output: "We all ate the fish and then made dessert.",
+                  text: "comimos el pescado y luego hicimos el postre.",
+                  output: "Todos comimos el pescado y luego hicimos el postre.",
                   isLoading: false,
                 },
                 {
                   id: uniqid("input_"),
-                  text: "I like ski every day.",
-                  output: "I like skiing every day.",
+                  text: "Me esquiar todos los días",
+                  output: "Me gusta esquiar todos los días.",
                   isLoading: false,
                 },
               ],
@@ -193,7 +193,7 @@ export const migrations = {
           ...state.editor.present,
           workspaces: state.editor.present.workspaces.map((workspace: any) => ({
             ...workspace,
-            name: "Draft #1",
+            name: "Mamotreto #1",
           })),
         },
       },

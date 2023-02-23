@@ -33,21 +33,21 @@ export default function CompletionParameters(props: Props) {
             <Grid item>
               <TextField
                 disabled
-                label={"Model"}
+                label={"Modelo"}
                 value={props.parameters.engine}
               />
             </Grid>
             <Grid item>
               <TextField
                 disabled
-                label={"Response length"}
+                label={"Longitud de respuesta"}
                 value={props.parameters.engine}
               />
             </Grid>
             <Grid item>
               <TextField
                 disabled
-                label={"Temperature"}
+                label={"Temperatura"}
                 value={props.parameters.temperature}
               />
             </Grid>
@@ -65,14 +65,14 @@ export default function CompletionParameters(props: Props) {
             <Grid item>
               <TextField
                 disabled
-                label={"Presence Penalty"}
+                label={"Penalización de frecuencia"}
                 value={props.parameters.presencePenalty}
               />
             </Grid>
             <Grid item>
               <TextField
                 disabled
-                label={"Frequency Penalty"}
+                label={"Penalización de presencia"}
                 value={props.parameters.frequencyPenalty}
               />
             </Grid>
@@ -81,7 +81,7 @@ export default function CompletionParameters(props: Props) {
         <Grid item>
           <ChipInput
             disabled
-            label={"Stop symbols"}
+            label={"Secuencias de detención"}
             value={stopSymbols.map((symbol) => {
               return symbol.split("\n").join("\\n");
             })}

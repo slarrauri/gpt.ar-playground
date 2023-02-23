@@ -63,7 +63,7 @@ function Example(props: Props) {
                 value={props.text}
                 onChange={handleInputChange}
                 fullWidth={true}
-                label={`Example ${props.ind + 1}`}
+                label={`Ejemplo ${props.ind + 1}`}
                 variant="outlined"
               />
             </Box>
@@ -73,7 +73,7 @@ function Example(props: Props) {
                 type={"text"}
                 value={props.output}
                 fullWidth={true}
-                label="GPT-3 Output"
+                label="Salida GPT-3"
                 variant="outlined"
                 InputLabelProps={{ shrink: props.output !== undefined }}
                 disabled
@@ -86,7 +86,7 @@ function Example(props: Props) {
                   type={"text"}
                   value={props.previousOutput}
                   fullWidth={true}
-                  label="Previous Output"
+                  label="Salida Anterior"
                   variant="outlined"
                   InputLabelProps={{
                     shrink: props.previousOutput !== undefined,

@@ -51,11 +51,11 @@ export default function Input(props: Props) {
   return (
     <TextField
       multiline
-      label={"Message (Cmd+Enter to send)"}
+      label={"Mensaje (Cmd+Enter para enviar)"}
       InputLabelProps={{
         shrink: true,
       }}
-      placeholder={hasStarted ? "Your response" : "Start a conversation"}
+      placeholder={hasStarted ? "Tu respuesta" : "Comenzar Conversación"}
       value={inputValue}
       onChange={onInputChange}
       onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {

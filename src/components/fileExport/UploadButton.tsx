@@ -53,7 +53,7 @@ export default function UploadButton(props: Props) {
         size={"small"}
         startIcon={<CloudUploadIcon />}
       >
-        Upload
+        Cargar
       </Button>
     </Files>
   );

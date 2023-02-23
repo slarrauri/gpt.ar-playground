@@ -51,7 +51,7 @@ export default function TemplateDialog() {
       onClose={handleTemplateDialogClose}
       aria-labelledby="template-dialog-title"
     >
-      <DialogTitle id="template-dialog-title">Load Template</DialogTitle>
+      <DialogTitle id="template-dialog-title">Cargar Plantilla</DialogTitle>
       <DialogContent className={classes.templateDialog}>
         {templateGroups.map((templateGroup, ind) => (
           <div key={ind}>
@@ -77,7 +77,7 @@ export default function TemplateDialog() {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleTemplateDialogClose} color="primary">
-          Close
+          Cerrar
         </Button>
       </DialogActions>
     </Dialog>

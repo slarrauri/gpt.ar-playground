@@ -61,19 +61,19 @@ export default function Variation(props: Props) {
       {showPromptForVariations && (
         <CardActions>
           <Typography variant="caption">
-            Temperature: {props.temperature}
+            Creatividad(Temperatura): {props.temperature}
           </Typography>
           <Typography variant="caption">
             Max tokens: {props.maxTokens}
           </Typography>
           <Typography variant="caption">Top P: {props.topP}</Typography>
           <Typography variant="caption">
-            Frequency penalty: {props.frequencyPenalty}
+          Penalización de frecuencia: {props.frequencyPenalty}
           </Typography>
           <Typography variant="caption">
-            Presence penalty: {props.presencePenalty}
+          Penalización de presencia: {props.presencePenalty}
           </Typography>
-          <Typography variant="caption">Model: {props.modelName}</Typography>
+          <Typography variant="caption">Modelo: {props.modelName}</Typography>
         </CardActions>
       )}
     </Card>

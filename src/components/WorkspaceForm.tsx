@@ -7,6 +7,7 @@ import { toggleTemplateDialog } from "../slices/editorSlice";
 import { useDispatch } from "react-redux";
 import DownloadButton from "./fileExport/DownloadButton";
 import UploadButton from "./fileExport/UploadButton";
+import texts from "../texts";
 
 const useStyles = makeStyles({
   fileExportButton: {
@@ -48,7 +49,7 @@ export default function WorkspaceForm() {
             startIcon={<LibraryBooksIcon />}
             onClick={handleTemplateDialogOpen}
           >
-            Explore templates
+            {texts.components.WorksapceForm.Button}
           </Button>
         </Grid>
       </Grid>

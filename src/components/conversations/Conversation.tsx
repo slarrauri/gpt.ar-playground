@@ -89,15 +89,15 @@ export default function Conversation(props: Props) {
         <Grid container alignItems={"center"} justify={"space-between"}>
           <Grid item>
             <Typography>
-              {!hasStarted && "New Conversation"}
+              {!hasStarted && "Nueva Conversación"}
               {hasStarted && (
                 <Box>
                   <Typography component={"span"}>
-                    Conversation #{props.ind}
+                  Conversación #{props.ind}
                   </Typography>
                   <br />
                   <Typography variant={"caption"} component={"span"}>
-                    The prompt and parameters are locked.
+                  El prompt y los parámetros están bloqueados.
                   </Typography>
                 </Box>
               )}
@@ -184,7 +184,7 @@ export default function Conversation(props: Props) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Parameters</Typography>
+              <Typography>Parámetros</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -209,7 +209,7 @@ export default function Conversation(props: Props) {
                         );
                       }}
                       className={styles.settingField}
-                      label={"Before User Input"}
+                      label={"Antes de la entrada del usuario"}
                       variant={"outlined"}
                     />
                   </Grid>
@@ -231,7 +231,7 @@ export default function Conversation(props: Props) {
                         );
                       }}
                       className={styles.settingField}
-                      label={"Before GPT-3 Completion"}
+                      label={"Antes de la finalización de GPT-3"}
                       variant={"outlined"}
                     />
                   </Grid>

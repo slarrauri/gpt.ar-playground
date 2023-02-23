@@ -68,7 +68,7 @@ export default function DownloadButton(props: Props) {
       startIcon={<SaveIcon />}
       onClick={handleSaveAndDownload}
     >
-      Download
+      Descargar
     </Button>
   );
 }

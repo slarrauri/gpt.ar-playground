@@ -43,12 +43,7 @@ export default function ExamplesTab() {
           <CardContent>
             <Typography variant="subtitle1">Multiple Examples</Typography>
             <Typography variant="body2">
-              This is a tool to quickly run your prompt on multiple examples.
-              You can use it for text transformation and classification tasks.
-              Use "{"{example}"}" key in the prompt and the editor will replace
-              it with each of the following examples. The tool is useful to
-              understand how changing a prompt and parameters will impact
-              generated results.
+              Esta es una herramienta para ejecutar rápidamente su prompt en múltiples ejemplos. Puede utilizarla para tareas de transformación y clasificación de texto. Utilice la clave "{"{example}"}" en el prompt y el editor la reemplazará por cada uno de los siguientes ejemplos. La herramienta es útil para comprender cómo el cambio de un prompt y parámetros afectará los resultados generados.
             </Typography>
             <Box mt={1}>
               <RunExamplesButton />
@@ -65,7 +60,7 @@ export default function ExamplesTab() {
                         color="primary"
                       />
                     }
-                    label="Show previous outputs"
+                    label="Mostrar resultados anteriores"
                   />
                 </Grid>
               </Grid>

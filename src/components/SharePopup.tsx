@@ -23,6 +23,7 @@ import {
 import SharedPrompt from "../resources/SharedPrompt";
 import { useSelector } from "react-redux";
 import { green } from "@material-ui/core/colors";
+import texts from "../texts";
 
 const useStyles = makeStyles((theme: Theme) => ({
   closeButton: {
@@ -60,7 +61,7 @@ export default function SharePopup() {
   return (
     <Dialog open={open} onClose={handleClose} fullWidth={true} maxWidth={"sm"}>
       <DialogTitle id="scroll-dialog-title">
-        Share Prompt
+        {texts.components.sharePopup.DialogTitle}
         <IconButton
           aria-label="close"
           className={classes.closeButton}
@@ -92,8 +93,7 @@ export default function SharePopup() {
             }}
           >
             <Typography>
-              If you edit your prompt after sharing a link, the shared prompt
-              won't change.
+            Si editas tu entrada de texto después de compartir un enlace, la entrada de texto compartida no cambiará.    
             </Typography>
             <Box mt={1}>
               {link && (
@@ -121,7 +121,7 @@ export default function SharePopup() {
                           name="includeExamples"
                         />
                       }
-                      label="Include Examples"
+                      label="Incluye ejemplos"
                     />
                   </FormGroup>
                   <Button
@@ -136,7 +136,7 @@ export default function SharePopup() {
                         className={classes.buttonProgress}
                       />
                     )}
-                    Create Link
+                    Crear enlace
                   </Button>
                 </Box>
               )}

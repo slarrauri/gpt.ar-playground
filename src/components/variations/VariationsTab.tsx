@@ -47,16 +47,13 @@ export default function VariationsTab() {
       <Box mb={1}>
         <Card className={styles.instructionCard}>
           <CardContent>
-            <Typography variant="subtitle1">Variations</Typography>
+            <Typography variant="subtitle1">Variaciones</Typography>
             <Typography variant="body2">
-              This is a tool to generate multiple completions from the same
-              prompt. Use it to explore the variety of GPT-3 completions and
-              impact of parameters on them. If you like a completion, add it to
-              the prompt and GPT-3 will generate more similar completions.
+            Esta es una herramienta para generar múltiples completaciones a partir del mismo prompt. Úsela para explorar la variedad de completaciones de GPT-3 y el impacto de los parámetros en ellas. Si le gusta una completación, añádala al prompt y GPT-3 generará más completaciones similares.
             </Typography>
             <Box mt={1}>
               <Typography id="max-variations-slider" gutterBottom>
-                How many samples to generate (impacts processing time):
+              ¿A cuántas muestras generar? (impacta el tiempo de procesamiento y Tokens consumidos):
               </Typography>
               <Slider
                 defaultValue={10}
@@ -86,7 +83,7 @@ export default function VariationsTab() {
               </Grid>
               <Grid item>
                 <Button onClick={() => dispatch(cleanVariations())}>
-                  Clean all
+                  Borrar
                 </Button>
               </Grid>
             </Grid>
@@ -101,7 +98,7 @@ export default function VariationsTab() {
                       color="primary"
                     />
                   }
-                  label="Show prompt"
+                  label="Mostrar Prompt"
                 />
               </Grid>
             </Grid>

@@ -69,7 +69,7 @@ export default function CodeGeneratorButton() {
 
     return (
         <div>
-            <Button variant="outlined" onClick={handleClickOpen('paper')}>Generate Code</Button>
+            <Button variant="outlined" onClick={handleClickOpen('paper')}>Código</Button>
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -78,7 +78,7 @@ export default function CodeGeneratorButton() {
                 maxWidth={'lg'}
             >
                 <DialogTitle id="scroll-dialog-title">
-                    Code Generator
+                    Código
                     <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
                         <CloseIcon />
                     </IconButton>
@@ -94,8 +94,9 @@ export default function CodeGeneratorButton() {
                                 native
                                 value={selectedExample}
                                 onChange={handleSelectChange}
-                                className={classes.fullWidth}>
-                            >
+                                className={classes.fullWidth}
+                                >
+                            
                                 {generateCodeExamples(completionParameters, tabIndex, examples).map((codeExample) => (
                                     <option key={codeExample.id} value={codeExample.id}>{codeExample.name}</option>
                                 ))}

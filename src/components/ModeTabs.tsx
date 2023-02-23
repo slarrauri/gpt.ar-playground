@@ -95,10 +95,10 @@ export default function ModeTabs() {
               aria-label="simple tabs example"
             >
               <Tab label="Simple" {...a11yProps(TabIndex.basic)} />
-              <Tab label="Examples" {...a11yProps(TabIndex.multipleExamples)} />
-              <Tab label="Variations" {...a11yProps(TabIndex.variations)} />
+              <Tab label="Multiple Ejemplos" {...a11yProps(TabIndex.multipleExamples)} />
+              <Tab label="Variaciones" {...a11yProps(TabIndex.variations)} />
               <Tab
-                label="Conversations"
+                label="Conversación"
                 {...a11yProps(TabIndex.conversations)}
               />
             </Tabs>

@@ -39,7 +39,7 @@ export default function FetchVariationsButton() {
       {isLoading && (
         <CircularProgress size={24} className={styles.buttonProgress} />
       )}{" "}
-      Generate
+      Generar
     </Button>
   );
 }

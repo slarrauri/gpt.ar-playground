@@ -30,16 +30,15 @@ export default function DeletePopup(props: Props) {
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          This action cannot be undone. This will permanently delete the draft
-          with the prompt, parameters, examples, creative generations.
+        Esta acción no se puede deshacer. Esto eliminará permanentemente el borrador con el prompt, parámetros, ejemplos y generaciones creativas.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button onClick={props.onClose} color="primary" autoFocus>
-          Cancel
+          Cancelar
         </Button>
         <Button onClick={onDelete} color="primary">
-          Delete
+          Borrar
         </Button>
       </DialogActions>
     </Dialog>

@@ -43,8 +43,7 @@ export default function ApiKeyDialog() {
       <DialogTitle id="api-key-form-dialog-title">API Key</DialogTitle>
       <DialogContent>
         <DialogContentText>
-          Please provide your OpenAI API Key. We only store this key locally and
-          never send it to our servers.
+        Por favor proporcione su clave de API de OpenAI. Solo almacenamos esta clave localmente y nunca la enviamos a nuestros servidores.
         </DialogContentText>
         <TextField
           className={classes.apiKeyInput}
@@ -64,7 +63,7 @@ export default function ApiKeyDialog() {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleApiKeyDialogClose} color="primary">
-          Done
+          Guardar
         </Button>
       </DialogActions>
     </Dialog>

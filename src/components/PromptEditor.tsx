@@ -131,16 +131,16 @@ export function PromptEditor() {
           <Card>
             <CardContent>
               <Typography gutterBottom>
-                <strong>Parameters</strong>
+                <strong>Parámetros</strong>
               </Typography>
               <Tooltip
                 title={
-                  '"Controls randomness: Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive."'
+                  '"Controla la aleatoriedad: Reducir el valor de este parámetro resulta en completados menos aleatorios. A medida que la temperatura se acerca a cero, el modelo se volverá determinista y repetitivo. Se recomienda cambiar este valor o Top P, pero no ambos."'
                 }
                 placement="left"
               >
                 <Typography id="temperature-slider" gutterBottom>
-                  Temperature: <strong>{temperature}</strong>
+                  Creatividad(temperatura): <strong>{temperature}</strong>
                 </Typography>
               </Tooltip>
               <Slider
@@ -164,7 +164,7 @@ export function PromptEditor() {
                 max={1}
               />
               <Typography id="max-tokens-slider" gutterBottom>
-                Response length: <strong>{maxTokens}</strong>
+              Longitud de la respuesta(Tokens): <strong>{maxTokens}</strong>
               </Typography>
               <Slider
                 defaultValue={10}
@@ -188,10 +188,10 @@ export function PromptEditor() {
               />
 
               <Tooltip
-                title="On which symbols GPT-3 should stop generating text. Enter \n for a line break."
+                title="En qué símbolos debería detener la generación de texto GPT-3. Ingresa \n para hacer un salto de línea."
                 placement="left"
               >
-                <Typography gutterBottom>Stop sequences:</Typography>
+                <Typography gutterBottom>Secuencias de detención:</Typography>
               </Tooltip>
               <ChipInput
                 value={stopSymbols}
@@ -207,11 +207,11 @@ export function PromptEditor() {
 
             <CardContent>
               <Typography gutterBottom>
-                <strong>Advanced parameters</strong>
+                <strong>Parámetros avanzados</strong>
               </Typography>
               <Tooltip
                 title={
-                  '"Controls diversity via nucleus sampling: 0.5 means half of all likelihood-weighted options are considered."'
+                  '"Controla la diversidad a través del muestreo de núcleo: 0.5 significa que se consideran la mitad de todas las opciones ponderadas por la probabilidad. Se recomienda cambiar este valor o la Temperatura pero no ambos."'
                 }
                 placement="left"
               >
@@ -241,12 +241,12 @@ export function PromptEditor() {
               />
               <Tooltip
                 title={
-                  '"How much to penalize new tokens based on their existing frequency in the text so far. Decreases the model\'s likelihood to repeat the same line verbatim."'
+                  '"Indica cuánto penalizar a los nuevos tokens en función de su frecuencia existente en el texto hasta el momento. Esto reduce la probabilidad de que el modelo repita exactamente la misma línea."'
                 }
                 placement="left"
               >
                 <Typography id="frequency-penalty-slider" gutterBottom>
-                  Frequency Penalty: <strong>{frequencyPenalty}</strong>
+                Penalización de frecuencia.: <strong>{frequencyPenalty}</strong>
                 </Typography>
               </Tooltip>
               <Slider
@@ -271,12 +271,12 @@ export function PromptEditor() {
               />
               <Tooltip
                 title={
-                  '"How much to penalize new tokens based on whether they appear in the text so far. Increases the model\'s likelihood to talk about new topics."'
+                  '"Indica cuánto penalizar a los nuevos tokens en función de si aparecen o no en el texto hasta el momento. Esto aumenta la probabilidad de que el modelo hable sobre nuevos temas."'
                 }
                 placement="left"
               >
                 <Typography id="presence-penalty-slider" gutterBottom>
-                  Presence Penalty: <strong>{presencePenalty}</strong>
+                Penalización de presencia: <strong>{presencePenalty}</strong>
                 </Typography>
               </Tooltip>
               <Slider
@@ -300,7 +300,7 @@ export function PromptEditor() {
                 max={1}
               />
               <Typography id="model-name-typography" gutterBottom>
-                Model name:
+                Modelo:
               </Typography>
               <Select
                 native
@@ -322,7 +322,7 @@ export function PromptEditor() {
         <Grid item xs={12} sm={9} md={9}>
           <TextField
             id="prompt-text"
-            label="A prompt"
+            label="Prompt"
             multiline
             rows={9}
             rowsMax={100}
