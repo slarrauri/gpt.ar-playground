@@ -49,7 +49,7 @@ export default function WorkspaceForm() {
             startIcon={<LibraryBooksIcon />}
             onClick={handleTemplateDialogOpen}
           >
-            Plantillas
+          Plantillas
           </Button>
         </Grid>
       </Grid>
