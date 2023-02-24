@@ -1,6 +1,6 @@
 {
-  "short_name": "Prompts",
-  "name": "Prompts.AI",
+  "short_name": "gpt.ar-playground",
+  "name": "GPT.ar-playground",
   "icons": [
   ],
   "start_url": ".",
