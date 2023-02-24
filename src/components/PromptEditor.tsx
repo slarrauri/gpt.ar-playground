@@ -157,9 +157,16 @@ export function PromptEditor() {
                 min={0}
                 max={1}
               />
+              <Tooltip
+                title={
+                  '"Los tokens se utilizan para representar el texto de entrada para el modelo y también para generar la salida del modelo"'
+                }
+                placement="left"
+              >
               <Typography id="max-tokens-slider" gutterBottom>
               Longitud de la respuesta(Tokens): <strong>{maxTokens}</strong>
               </Typography>
+              </Tooltip>
               <Slider
                 defaultValue={10}
                 aria-labelledby="max-tokens-slider"
@@ -293,9 +300,16 @@ export function PromptEditor() {
                 min={0}
                 max={1}
               />
+              <Tooltip
+                title={
+                 'Refiérase a las Instrucciones para ver una descripción de cada Modelo'
+                }
+                placement="left"
+              >
               <Typography id="model-name-typography" gutterBottom>
                 Modelo:
               </Typography>
+              </Tooltip>
               <Select
                 native
                 id="model-name-select"

@@ -9,7 +9,6 @@ import {
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import UndoIcon from "@material-ui/icons/Undo";
 import RedoIcon from "@material-ui/icons/Redo";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch, useSelector } from "react-redux";
@@ -64,17 +63,11 @@ export default function Header() {
             </IconButton>
           </div>
           <div className={classes.buttonGroup}>
-            <IconButton
-              aria-label="GitHib"
-              onClick={() =>
-                window.open(
-                  "https://github.com/slarrauri/gpt.ar-playground",
-                  "_blank"
-                )
-              }
-            >
-              <GitHubIcon fontSize={"small"} />
-            </IconButton>
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
+              <Typography variant="h6" color="inherit">
+                Ver Instrucciones
+              </Typography>
+            </a>
           </div>
         </Toolbar>
       </Container>
