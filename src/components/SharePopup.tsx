@@ -23,7 +23,6 @@ import {
 import SharedPrompt from "../resources/SharedPrompt";
 import { useSelector } from "react-redux";
 import { green } from "@material-ui/core/colors";
-import texts from "../texts";
 
 const useStyles = makeStyles((theme: Theme) => ({
   closeButton: {
@@ -61,7 +60,7 @@ export default function SharePopup() {
   return (
     <Dialog open={open} onClose={handleClose} fullWidth={true} maxWidth={"sm"}>
       <DialogTitle id="scroll-dialog-title">
-        {texts.components.sharePopup.DialogTitle}
+        Compartir
         <IconButton
           aria-label="close"
           className={classes.closeButton}

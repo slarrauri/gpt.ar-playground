@@ -5,7 +5,6 @@ import getTemplateGroups, {
   getFlattenedTemplates,
 } from "../libs/templatesLibrary";
 import { loadTemplate, cleanExampleList } from "../slices/editorSlice";
-import texts from "../texts";
 
 interface FormElements extends HTMLCollection {
   templateId: HTMLSelectElement;
@@ -51,7 +50,7 @@ export default function TemplatesForm() {
           <Grid container spacing={1} alignItems="center">
             <Grid item>
               <Button type="submit" variant="contained" color="primary">
-                {texts.components.templateForm.Button}
+              Cargar
               </Button>
             </Grid>
           </Grid>
