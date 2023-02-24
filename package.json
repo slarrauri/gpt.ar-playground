@@ -1,5 +1,6 @@
 {
   "name": "gpt.ar-playground",
+  "homepage": "https://playground.gpt.ar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
